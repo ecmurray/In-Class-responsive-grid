@@ -7,11 +7,9 @@
 	grid-row-gap: 5px;
 	grid-column-gap: 5px;
 	grid-template-columns: 500px;
-
-	/* Play with: */
-	/* justify-content:; */
-	/* justify-items:;  */
-	/* align-items:; */
+	justify-content:center;
+	/* justify-items: */
+	align-items: center
 	/* align-content:; */
  }
 
