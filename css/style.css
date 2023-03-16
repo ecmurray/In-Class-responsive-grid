@@ -7,14 +7,14 @@
 	grid-row-gap: 5px;
 	grid-column-gap: 5px;
 	grid-template-columns: 500px;
-	justify-content:center;
-	/* justify-items: */
-	align-items: center;
-	/* align-content:; */
+
+	/* don't need any of these below*/
+
+	/* justify-content:start; */
+	/* justify-items: center; */
+	/* align-content: center; */
+	/* align-items: start; */
  }
-
- 
-
 
 @media screen and (min-width: 776px){
 
@@ -27,28 +27,19 @@
 	}
 
 	/* Make this a two column grid. */
-	.grid{
-
-
-		
-		/* Play with: */
-		/* justify-content:; */
-		/* align-items:;  */
-
-
-		
+	.grid {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
  	}
 
- 	.item1{
- 		 /* Span the entire first row  */
-		
-		  /* grid-column: ; */
+ 	.item1 {
+ 		/* Span the entire first row  */
+		grid-area: 1 / 1 / span 1 / -1;
  	}
 	
-	.item2{
+	.item2 {  
 		/* Start in row 2 and span 3 rows */
-		/* grid-row:; */
-
+		grid-area: 2 / 1 / span 3 / span 1;
 	}
 
 }
@@ -59,16 +50,24 @@
 
 	/* Make this a three column grid using fr. */
 	.grid{
-
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
 		/* Why don't we bother with justify here? */
 	}
-	.item3{
+	.item3 {
+		grid-area: 2 / 2 / span 2 / span 2;
 		/* Start in row 2 and span two rows 
 		   Start in column 2 and span two columns */
-
-
 		/* What happens if you try to span 3 columns */
 	}
+	.item2 {
+		grid-area: 2 / 1 / span 3 / span 1;
+	}
+	.item4 {
+		grid-area: 4 / 2 / span 1 / span 1;
+	}
+	.item5 {
+		grid-area: 4 / 3 / span 1 / span 1;
+	}
 
-	
 }
